@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="loading">
+      <div class="hourglassBackground">
+        <div class="hourglassContainer">
+          <div class="hourglassCurves"></div>
+          <div class="hourglassCapTop"></div>
+          <div class="hourglassGlassTop"></div>
+          <div class="hourglassSand"></div>
+          <div class="hourglassSandStream"></div>
+          <div class="hourglassCapBottom"></div>
+          <div class="hourglassGlass"></div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div
+        class="max-w-[1240px] relative mx-auto px-20px flex justify-between align-center py-[20px]"
+      >
+        <a href="">
+          <img src="../images/Group (7).svg" alt="" />
+        </a>
+        <ul class="md:flex justify-between align-center gap-[40px] hidden">
+          <li
+            class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            <a href="/">Home</a>
+          </li>
+          <li
+            class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            <a href="./shop.html">Shop</a>
+          </li>
+          <li
+            class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            <a href="./plant.html">Plant Care</a>
+          </li>
+          <li
+            class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
+          >
+            <a href="./blog.html">Blogs</a>
+          </li>
+        </ul>
+        <div class="md:flex hidden align-center gap-[20px]">
+          <div class="">
+            <button><img src="../images/Vector (6).svg" alt="" /></button>
+          </div>
+          <div class="">
+           <a href="./blog.html"><img src="../images/Group 1.svg" alt="" /></a>
+          </div>
+          <div class="coursor-pointer">
+            <!-- Modal toggle -->
+            <button
+              data-modal-target="crud-modal"
+              data-modal-toggle="crud-modal"
+              class="text-white bg-[lightgreen] box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-5 py-2.5 rounded-lg focus:outline-none"
+              type="button"
+            >
+              Log in
+            </button>
+
+            <!-- Main modal -->
+            <div
+              id="crud-modal"
+              tabindex="-1"
+              aria-hidden="true"
+              class="hidden backdrop-blur-[8px] overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+            >
+              <div class="relative p-4 w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div
+                  class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6"
+                >
+                  <!-- Modal header -->
+                  <div
+                    class="flex items-center justify-between border-b border-default pb-4 md:pb-5"
+                  >
+                    <h3 class="text-lg font-medium text-heading">
+                      Login/Register
+                    </h3>
+                    <button
+                      type="button"
+                      class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+                      data-modal-hide="crud-modal"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18 17.94 6M18 18 6.06 6"
+                        />
+                      </svg>
+                      <span class="sr-only">Close modal</span>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <form action="#">
+                    <div class="grid gap-4 grid-cols-2 py-4 md:py-6">
+                      <div class="col-span-2">
+                        <label
+                          for="name"
+                          class="block mb-2.5 text-sm font-medium text-heading"
+                          >Name</label
+                        >
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                          placeholder="Type product name"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="price"
+                          class="block mb-2.5 text-sm font-medium text-heading"
+                          >Price</label
+                        >
+                        <input
+                          type="number"
+                          name="price"
+                          id="price"
+                          class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                          placeholder="$2999"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-span-2 sm:col-span-1">
+                        <label
+                          for="category"
+                          class="block mb-2.5 text-sm font-medium text-heading"
+                          >Category</label
+                        >
+                        <select
+                          id="category"
+                          class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand px-3 py-2.5 shadow-xs placeholder:text-body"
+                        >
+                          <option selected="">Select category</option>
+                          <option value="TV">TV/Monitors</option>
+                          <option value="PC">PC</option>
+                          <option value="GA">Gaming/Console</option>
+                          <option value="PH">Phones</option>
+                        </select>
+                      </div>
+                      <div class="col-span-2">
+                        <label
+                          for="description"
+                          class="block mb-2.5 text-sm font-medium text-heading"
+                          >Product Description</label
+                        >
+                        <textarea
+                          id="description"
+                          rows="4"
+                          class="block bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
+                          placeholder="Write product description here"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center space-x-4 border-t border-default pt-4 md:pt-6"
+                    >
+                      <button
+                        type="submit"
+                        class="inline-flex bg-green items-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+                      >
+                        <svg
+                          class="w-4 h-4 me-1.5 -ms-0.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 12h14m-7 7V5"
+                          />
+                        </svg>
+                        Add new product
+                      </button>
+                      <button
+                        data-modal-hide="crud-modal"
+                        type="button"
+                        class="text-body  bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center md:hidden">
+          <button
+            class="inline-flex bg-green items-center justify-center text-black bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+            type="button"
+            data-drawer-target="drawer-navigation"
+            data-drawer-show="drawer-navigation"
+            aria-controls="drawer-navigation"
+          >
+            <img
+              src="../images/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <div
+          id="drawer-navigation"
+          class="fixed backdrop-blur-[8px] top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral-primary-soft w-80 border-e border-default"
+          tabindex="-1"
+          aria-labelledby="drawer-navigation-label"
+        >
+          <div class="border-b border-default pb-4 flex items-center">
+            <button
+              type="button"
+              data-drawer-hide="drawer-navigation"
+              aria-controls="drawer-navigation"
+              class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18 17.94 6M18 18 6.06 6"
+                />
+              </svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+          </div>
+          <div class="py-5 overflow-y-auto">
+           <ul class="space-y-2 font-medium flex flex-col">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]"
+              >
+                <a
+                  href="/"
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[104px] rounded-xl bg-[lightgreen]">
+                <a
+                  href="./shop.html"
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  Shop
+                </a>
+              </li>
+              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[90px] rounded-xl bg-[lightgreen]">
+                <a
+                  href="./plant.html"
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  Plant Care
+                </a>
+              </li>
+              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+                <a
+                  href="./blog.html"
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  Blog
+                </a>
+              </li>
+              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+                <a
+                  href=""
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  <button><img src="../images/Vector (6).svg" alt="" /></button>
+                </a>
+              </li>
+              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+                <a
+                  href=""
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  <button><img src="../images/Group 1.svg" alt="" /></button>
+                </a>
+              </li>
+              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[70px] rounded-xl bg-[lightgreen]">
+                <a
+                  href=""
+                  class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
+                >
+                  <button
+                    class="py-[5px] px-[40px] bg-[lightgreen] rounded-[12px] text-white"
+                  >
+                    Login
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="max-w-6xl mx-auto px-4 py-10">
+        
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-2">
+            <h2 class="text-lg font-semibold mb-4">Billing Address</h2>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <label>First Name <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  class="w-full border px-3 py-2 mt-1 rounded outline-none"
+                />
+              </div>
+
+              <div>
+                <label>Last Name <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  class="w-full border px-3 py-2 mt-1 rounded outline-none"
+                />
+              </div>
+
+              <div>
+                <label
+                  >Country / Region <span class="text-red-500">*</span></label
+                >
+                <select
+                  class="w-full border px-3 py-2 mt-1 rounded outline-none"
+                >
+                  <option>Select a country / region</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Town / City <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  class="w-full border px-3 py-2 mt-1 rounded outline-none"
+                />
+              </div>
+
+              <div class="md:col-span-2">
+                <label
+                  >Street Address <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="House number and street name"
+                  class="w-full border px-3 py-2 mt-1 rounded mb-2 outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Apartment, suite, unit, etc. (optional)"
+                  class="w-full border px-3 py-2 rounded outline-none"
+                />
+              </div>
+
+              <div>
+                <label>State<span class="text-red-500">*</span></label>
+                <select
+                  class="w-full border px-3 py-2 mt-1 rounded outline-none"
+                >
+                  <option>Toshkent</option>
+                  <option>Samarqand</option>
+                  <option>Farg'ona</option>
+                  <option>Jizzax</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Zip <span class="text-red-500">*</span></label>
+                <input
+                  type="text"
+                  class="w-full border px-3 py-2 mt-1 rounded "
+                />
+              </div>
+
+              <div>
+                <label>Email address <span class="text-red-500">*</span></label>
+                <input
+                  type="email"
+                  class="w-full border px-3 py-2 mt-1 rounded "
+                />
+              </div>
+
+              <div>
+                <label>Phone Number <span class="text-red-500">*</span></label>
+                <div class="flex mt-1">
+                  <select class="border px-2 rounded-l ">
+                    <option>+998</option>
+                  </select>
+                  <input
+                    type="text"
+                    class="w-full border px-3 py-2 rounded-r "
+                  />
+                </div>
+              </div>
+
+              <div class="md:col-span-2 flex items-center gap-2 mt-2">
+                <input type="checkbox" class="" />
+                <label>Ship to a different address?</label>
+              </div>
+
+              <div class="md:col-span-2">
+                <label>Order notes (optional)</label>
+                <textarea
+                  class="w-full border px-3 py-2 mt-1 rounded h-28 outline-none"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Your Order</h3>
+
+            <div
+              class="text-sm border-b pb-3 mb-3 flex justify-between text-gray-500"
+            >
+              <span>Products</span>
+              <span>Subtotal</span>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex gap-3 items-center">
+                <img
+                  src="../images/mini-flower1.png"
+                  class="w-12 h-12 object-contain bg-gray-50 p-1 rounded"
+                />
+                <div>
+                  <p class="text-sm">
+                    Barberton Daisy <span class="text-gray-400">(x 2)</span>
+                  </p>
+                  <p class="text-xs text-gray-400">SKU: 1995751877966</p>
+                </div>
+              </div>
+              <p class="text-green-600">$238.00</p>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex gap-3 items-center">
+                <img
+                  src="../images/mini-flower2.png"
+                  class="w-12 h-12 object-contain bg-gray-50 p-1 rounded"
+                />
+                <div>
+                  <p class="text-sm">
+                    Blushing Bromeliad <span class="text-gray-400">(x 6)</span>
+                  </p>
+                  <p class="text-xs text-gray-400">SKU: 19957518757065</p>
+                </div>
+              </div>
+              <p class="text-green-600">$834.00</p>
+            </div>
+
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex gap-3 items-center">
+                <img
+                  src="../images/mini-flower3.png"
+                  class="w-12 h-12 object-contain bg-gray-50 p-1 rounded"
+                />
+                <div>
+                  <p class="text-sm">
+                    Aluminum Plant <span class="text-gray-400">(x 9)</span>
+                  </p>
+                  <p class="text-xs text-gray-400">SKU: 1995751877786</p>
+                </div>
+              </div>
+              <p class="text-green-600">$1,611.00</p>
+            </div>
+
+            <p class="text-xs text-gray-500 mb-2">
+              Have a coupon code?
+              <span class="text-green-600 cursor-pointer">Click here</span>
+            </p>
+
+            <div class="text-sm space-y-2 border-t pt-3">
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span>$2,683.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Coupon Discount</span>
+                <span>(-) $0.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Shipping</span>
+                <span>$16.00</span>
+              </div>
+
+              <p class="text-green-600 text-xs cursor-pointer">
+                View shipping charge
+              </p>
+            </div>
+
+            <div
+              class="flex justify-between font-semibold text-lg border-t pt-3 mt-3"
+            >
+              <span>Total</span>
+              <span class="text-green-600">$2,699.00</span>
+            </div>
+
+            <h4 class="mt-6 mb-3 font-medium">Payment Method</h4>
+
+            <div class="space-y-2 text-sm">
+              <label
+                class="flex items-center gap-2 border p-3 rounded cursor-pointer"
+              >
+                <input type="radio" name="payment" class="accent-green-600" />
+                <img src="../images/logos-payment.png" alt="" />
+              </label>
+
+              <label
+                class="flex items-center gap-2 border p-3 rounded cursor-pointer"
+              >
+                <input type="radio" name="payment" />
+                <span>Direct bank transfer</span>
+              </label>
+
+              <label
+                class="flex items-center gap-2 border p-3 rounded cursor-pointer border-green-600"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  checked
+                  class="accent-green-600"
+                />
+                <span>Cash on delivery</span>
+              </label>
+            </div>
+
+            <button
+              class="w-full bg-green-600 text-white py-3 rounded mt-5 hover:bg-green-700 transition"
+            >
+              Place Order
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#FBFBFB] py-8 md:py-12">
+        <div
+          class="max-w-[1240px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          <div class="text-center">
+            <img src="../images/Frame (10).svg" class="mx-auto mb-3 w-10" />
+            <h3 class="font-semibold mb-2 text-sm md:text-base">Garden Care</h3>
+            <p class="text-xs md:text-sm text-gray-500">
+              We are an online plant shop offering a wide range of cheap and
+              trendy plants.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img src="../images/Group 18 (1).svg" class="mx-auto mb-3 w-10" />
+            <h3 class="font-semibold mb-2 text-sm md:text-base">
+              Plant Renovation
+            </h3>
+            <p class="text-xs md:text-sm text-gray-500">
+              We are an online plant shop offering a wide range of cheap and
+              trendy plants.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img src="../images/Group 19.svg" class="mx-auto mb-3 w-10" />
+            <h3 class="font-semibold mb-2 text-sm md:text-base">
+              Watering Garden
+            </h3>
+            <p class="text-xs md:text-sm text-gray-500">
+              We are an online plant shop offering a wide range of cheap and
+              trendy plants.
+            </p>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <h3 class="font-semibold mb-3 text-sm md:text-base">
+              Would you like to join newsletters?
+            </h3>
+
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="enter your email..."
+                class="w-full border px-3 py-2 text-sm rounded-l-md outline-none"
+              />
+              <button class="bg-green-600 text-white px-4 text-sm rounded-r-md">
+                Join
+              </button>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-3">
+              We usually post offers and challenges in newsletter.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-white border-t">
+      <div class="max-w-[1240px] mx-auto px-4 py-8 md:py-10">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div class="col-span-2 md:col-span-1">
+            <h3 class="font-bold text-green-600 mb-3">
+              <img src="./images/Group (7).svg" alt="" />
+            </h3>
+            <p class="text-xs md:text-sm text-gray-500">
+              70 West Buckingham Ave. Farmingdale, NY 11735
+            </p>
+            <p class="text-xs md:text-sm text-gray-500 mt-2">
+              contact@greenshop.com
+            </p>
+            <p class="text-xs md:text-sm text-gray-500">+88 01911 717 490</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3 text-sm">My Account</h4>
+            <ul class="text-xs md:text-sm text-gray-500 space-y-2">
+              <li>My Account</li>
+              <li>Our stores</li>
+              <li>Contact us</li>
+              <li>Career</li>
+              <li>Specials</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3 text-sm">Help & Guide</h4>
+            <ul class="text-xs md:text-sm text-gray-500 space-y-2">
+              <li>Help Center</li>
+              <li>How to Buy</li>
+              <li>Shipping & Delivery</li>
+              <li>Product Policy</li>
+              <li>How to Return</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-3 text-sm">Categories</h4>
+            <ul class="text-xs md:text-sm text-gray-500 space-y-2">
+              <li>House Plants</li>
+              <li>Potter Plants</li>
+              <li>Seeds</li>
+              <li>Small Plants</li>
+              <li>Accessories</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center text-xs md:text-sm text-gray-400 border-t pt-4">
+          © 2021 GreenShop. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+  </body>
+</html>
