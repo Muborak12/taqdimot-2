@@ -8,11 +8,12 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
-    <div class="loading">
+  <body class="overflow-hidden">
+    <div class="loading overflow-hidden">
       <div class="hourglassBackground">
         <div class="hourglassContainer">
           <div class="hourglassCurves"></div>
@@ -30,50 +31,60 @@
         class="max-w-[1240px] relative mx-auto px-20px flex justify-between align-center py-[20px]"
       >
         <a href="">
-          <img src="../images/Group (7).svg" alt="" />
+          <img data-aos="fade-down" src="../images/Group (7).svg" alt="" />
         </a>
-        <ul class="md:flex justify-between align-center gap-[40px] hidden">
+        <ul class="md:flex justify-between items-center gap-[40px] hidden">
           <li
+            data-aos="fade-down"
             class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             <a href="/">Home</a>
           </li>
           <li
+            data-aos="fade-down"
             class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             <a href="./shop.html">Shop</a>
           </li>
           <li
+            data-aos="fade-down"
             class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             <a href="./plant.html">Plant Care</a>
           </li>
           <li
+            data-aos="fade-down"
             class="relative inline-block text-gray-800 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 hover:after:w-full"
           >
             <a href="./blog.html">Blogs</a>
           </li>
         </ul>
-        <div class="md:flex hidden align-center gap-[20px]">
+        <div class="md:flex hidden items-center gap-[20px]">
           <div class="">
-            <button><img src="../images/Vector (6).svg" alt="" /></button>
+            <a href="./shop.html">
+              <img data-aos="fade-down" src="../images/Vector (6).svg" alt="" />
+            </a>
           </div>
           <div class="">
-           <a href="./blog.html"><img src="../images/Group 1.svg" alt="" /></a>
+            <a href="./blog.html"
+              ><img data-aos="fade-down" src="../images/Group 1.svg" alt=""
+            /></a>
           </div>
-          <div class="coursor-pointer">
+          <div class="">
             <!-- Modal toggle -->
             <button
               data-modal-target="crud-modal"
               data-modal-toggle="crud-modal"
               class="text-white bg-[lightgreen] box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-5 py-2.5 rounded-lg focus:outline-none"
               type="button"
+              data-aos="fade-down"
             >
               Log in
             </button>
 
             <!-- Main modal -->
             <div
+              data-aos="fade-down"
               id="crud-modal"
               tabindex="-1"
               aria-hidden="true"
@@ -89,7 +100,7 @@
                     class="flex items-center justify-between border-b border-default pb-4 md:pb-5"
                   >
                     <h3 class="text-lg font-medium text-heading">
-                      Login/Register
+                      Create new product
                     </h3>
                     <button
                       type="button"
@@ -136,6 +147,7 @@
                       </div>
                       <div class="col-span-2 sm:col-span-1">
                         <label
+                          data-aos="fade-down"
                           for="price"
                           class="block mb-2.5 text-sm font-medium text-heading"
                           >Price</label
@@ -151,6 +163,7 @@
                       </div>
                       <div class="col-span-2 sm:col-span-1">
                         <label
+                          data-aos="fade-down"
                           for="category"
                           class="block mb-2.5 text-sm font-medium text-heading"
                           >Category</label
@@ -185,7 +198,7 @@
                     >
                       <button
                         type="submit"
-                        class="inline-flex bg-green items-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+                        class="inline-flex bg-[lightgreen] items-center text-black bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
                       >
                         <svg
                           class="w-4 h-4 me-1.5 -ms-0.5"
@@ -209,7 +222,7 @@
                       <button
                         data-modal-hide="crud-modal"
                         type="button"
-                        class="text-body  bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+                        class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
                       >
                         Cancel
                       </button>
@@ -270,7 +283,7 @@
             </button>
           </div>
           <div class="py-5 overflow-y-auto">
-           <ul class="space-y-2 font-medium flex flex-col">
+            <ul class="space-y-2 font-medium flex flex-col">
               <li
                 class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]"
               >
@@ -281,7 +294,9 @@
                   Home
                 </a>
               </li>
-              <li class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[104px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[104px] rounded-xl bg-[lightgreen]"
+              >
                 <a
                   href="./shop.html"
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
@@ -289,7 +304,9 @@
                   Shop
                 </a>
               </li>
-              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[90px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[90px] rounded-xl bg-[lightgreen]"
+              >
                 <a
                   href="./plant.html"
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
@@ -297,7 +314,9 @@
                   Plant Care
                 </a>
               </li>
-              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]"
+              >
                 <a
                   href="./blog.html"
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
@@ -305,23 +324,29 @@
                   Blog
                 </a>
               </li>
-              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]"
+              >
                 <a
-                  href=""
+                  href="./shop.html"
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
                 >
                   <button><img src="../images/Vector (6).svg" alt="" /></button>
                 </a>
               </li>
-              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[110px] rounded-xl bg-[lightgreen]"
+              >
                 <a
-                  href=""
+                  href="./blog.html"
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
                 >
                   <button><img src="../images/Group 1.svg" alt="" /></button>
                 </a>
               </li>
-              <li  class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[70px] rounded-xl bg-[lightgreen]">
+              <li
+                class="bg-[lightgreen] text-white text-center courser-pointer py-[5px] px-[70px] rounded-xl bg-[lightgreen]"
+              >
                 <a
                   href=""
                   class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-fg-brand group"
@@ -340,8 +365,6 @@
     </header>
     <main>
       <section class="max-w-6xl mx-auto px-4 py-10">
-        
-
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div class="lg:col-span-2">
             <h2 class="text-lg font-semibold mb-4">Billing Address</h2>
@@ -370,7 +393,11 @@
                 <select
                   class="w-full border px-3 py-2 mt-1 rounded outline-none"
                 >
-                  <option>Select a country / region</option>
+                  <option>Uzbekistan</option>
+                  <option>USA</option>
+                  <option>UKA</option>
+                   <option>Russia</option>
+                    <option>Japan</option>
                 </select>
               </div>
 
@@ -414,7 +441,7 @@
                 <label>Zip <span class="text-red-500">*</span></label>
                 <input
                   type="text"
-                  class="w-full border px-3 py-2 mt-1 rounded "
+                  class="w-full border px-3 py-2 mt-1 rounded"
                 />
               </div>
 
@@ -422,19 +449,19 @@
                 <label>Email address <span class="text-red-500">*</span></label>
                 <input
                   type="email"
-                  class="w-full border px-3 py-2 mt-1 rounded "
+                  class="w-full border px-3 py-2 mt-1 rounded"
                 />
               </div>
 
               <div>
                 <label>Phone Number <span class="text-red-500">*</span></label>
                 <div class="flex mt-1">
-                  <select class="border px-2 rounded-l ">
+                  <select class="border px-2 rounded-l">
                     <option>+998</option>
                   </select>
                   <input
                     type="text"
-                    class="w-full border px-3 py-2 rounded-r "
+                    class="w-full border px-3 py-2 rounded-r"
                   />
                 </div>
               </div>
@@ -584,8 +611,9 @@
         <div
           class="max-w-[1240px] mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          <div class="text-center">
-            <img src="../images/Frame (10).svg" class="mx-auto mb-3 w-10" />
+          <!-- ITEM 1 -->
+          <div data-aos="fade-up" data-aos-delay="100" class="text-center">
+            <img src="./images/Frame (10).svg" class="mx-auto mb-3 w-10" />
             <h3 class="font-semibold mb-2 text-sm md:text-base">Garden Care</h3>
             <p class="text-xs md:text-sm text-gray-500">
               We are an online plant shop offering a wide range of cheap and
@@ -593,8 +621,9 @@
             </p>
           </div>
 
-          <div class="text-center">
-            <img src="../images/Group 18 (1).svg" class="mx-auto mb-3 w-10" />
+          <!-- ITEM 2 -->
+          <div data-aos="fade-up" data-aos-delay="200" class="text-center">
+            <img src="./images/Group 18 (1).svg" class="mx-auto mb-3 w-10" />
             <h3 class="font-semibold mb-2 text-sm md:text-base">
               Plant Renovation
             </h3>
@@ -604,8 +633,9 @@
             </p>
           </div>
 
-          <div class="text-center">
-            <img src="../images/Group 19.svg" class="mx-auto mb-3 w-10" />
+          <!-- ITEM 3 -->
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center">
+            <img src="./images/Group 19.svg" class="mx-auto mb-3 w-10" />
             <h3 class="font-semibold mb-2 text-sm md:text-base">
               Watering Garden
             </h3>
@@ -615,7 +645,12 @@
             </p>
           </div>
 
-          <div class="text-center sm:text-left">
+          <!-- NEWSLETTER -->
+          <div
+            data-aos="fade-left"
+            data-aos-delay="400"
+            class="text-center sm:text-left"
+          >
             <h3 class="font-semibold mb-3 text-sm md:text-base">
               Would you like to join newsletters?
             </h3>
@@ -624,9 +659,11 @@
               <input
                 type="email"
                 placeholder="enter your email..."
-                class="w-full border px-3 py-2 text-sm rounded-l-md outline-none"
+                class="w-full border px-3 py-2 text-sm rounded-l-md outline-none focus:ring-2 focus:ring-green-500"
               />
-              <button class="bg-green-600 text-white px-4 text-sm rounded-r-md">
+              <button
+                class="bg-green-600 text-white px-4 text-sm rounded-r-md hover:bg-green-700 transition"
+              >
                 Join
               </button>
             </div>
@@ -640,11 +677,18 @@
     </main>
     <footer class="bg-white border-t">
       <div class="max-w-[1240px] mx-auto px-4 py-8 md:py-10">
+        <!-- GRID -->
         <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          <div class="col-span-2 md:col-span-1">
+          <!-- LOGO + INFO -->
+          <div
+            class="col-span-2 md:col-span-1"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <h3 class="font-bold text-green-600 mb-3">
               <img src="./images/Group (7).svg" alt="" />
             </h3>
+
             <p class="text-xs md:text-sm text-gray-500">
               70 West Buckingham Ave. Farmingdale, NY 11735
             </p>
@@ -654,45 +698,99 @@
             <p class="text-xs md:text-sm text-gray-500">+88 01911 717 490</p>
           </div>
 
-          <div>
+          <!-- COLUMN 1 -->
+          <div data-aos="fade-up" data-aos-delay="200">
             <h4 class="font-semibold mb-3 text-sm">My Account</h4>
             <ul class="text-xs md:text-sm text-gray-500 space-y-2">
-              <li>My Account</li>
-              <li>Our stores</li>
-              <li>Contact us</li>
-              <li>Career</li>
-              <li>Specials</li>
+              <li class="hover:text-green-600 transition">My Account</li>
+              <li class="hover:text-green-600 transition">Our stores</li>
+              <li class="hover:text-green-600 transition">Contact us</li>
+              <li class="hover:text-green-600 transition">Career</li>
+              <li class="hover:text-green-600 transition">Specials</li>
             </ul>
           </div>
 
-          <div>
+          <!-- COLUMN 2 -->
+          <div data-aos="fade-up" data-aos-delay="300">
             <h4 class="font-semibold mb-3 text-sm">Help & Guide</h4>
             <ul class="text-xs md:text-sm text-gray-500 space-y-2">
-              <li>Help Center</li>
-              <li>How to Buy</li>
-              <li>Shipping & Delivery</li>
-              <li>Product Policy</li>
-              <li>How to Return</li>
+              <li class="hover:text-green-600 transition">Help Center</li>
+              <li class="hover:text-green-600 transition">How to Buy</li>
+              <li class="hover:text-green-600 transition">
+                Shipping & Delivery
+              </li>
+              <li class="hover:text-green-600 transition">Product Policy</li>
+              <li class="hover:text-green-600 transition">How to Return</li>
             </ul>
           </div>
 
-          <div>
+          <!-- COLUMN 3 -->
+          <div data-aos="fade-up" data-aos-delay="400">
             <h4 class="font-semibold mb-3 text-sm">Categories</h4>
             <ul class="text-xs md:text-sm text-gray-500 space-y-2">
-              <li>House Plants</li>
-              <li>Potter Plants</li>
-              <li>Seeds</li>
-              <li>Small Plants</li>
-              <li>Accessories</li>
+              <li class="hover:text-green-600 transition">House Plants</li>
+              <li class="hover:text-green-600 transition">Potter Plants</li>
+              <li class="hover:text-green-600 transition">Seeds</li>
+              <li class="hover:text-green-600 transition">Small Plants</li>
+              <li class="hover:text-green-600 transition">Accessories</li>
             </ul>
           </div>
         </div>
 
-        <div class="text-center text-xs md:text-sm text-gray-400 border-t pt-4">
+        <!-- COPYRIGHT -->
+        <div
+          class="text-center text-xs md:text-sm text-gray-400 border-t pt-4"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
           © 2021 GreenShop. All Rights Reserved.
         </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jotfor.ms/agent/embedjs/019db9ca278b73ceb073f11ab31d039c98f1/embed.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-in-out",
+        offset: 80,
+      });
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "fade-down",
+        offset: 80,
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-in-out",
+        offset: 50,
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: "ease-in-out",
+        offset: 50,
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        easing: "ease-in-out",
+        offset: 30,
+      });
+    </script>
   </body>
 </html>
