@@ -15,20 +15,12 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="">
-    <div class="loading">
-      <div class="hourglassBackground">
-        <div class="hourglassContainer">
-          <div class="hourglassCurves"></div>
-          <div class="hourglassCapTop"></div>
-          <div class="hourglassGlassTop"></div>
-          <div class="hourglassSand"></div>
-          <div class="hourglassSandStream"></div>
-          <div class="hourglassCapBottom"></div>
-          <div class="hourglassGlass"></div>
-        </div>
-      </div>
+    <div
+      class="loading fixed top-0 w-full h-[100vh] bg-gray-700 text-white font-bold flex items-center justify-center text-[48px]"
+    >
+      Loading
     </div>
-    <header>
+    <header class="header ">
       <div
         class="max-w-[1240px] relative mx-auto px-20px flex justify-between align-center py-[20px]"
       >
@@ -2891,6 +2883,7 @@
       </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
@@ -2902,19 +2895,19 @@
     <script>
       AOS.init({
         duration: 1000,
-        once: true,
+       
       });
     </script>
     <script>
       AOS.init({
         duration: 800,
-        once: true,
+       
         easing: "ease-in-out",
         offset: 80,
       });
       AOS.init({
         duration: 800,
-        once: true,
+       
         easing: "fade-down",
         offset: 80,
       });
@@ -2922,7 +2915,7 @@
     <script>
       AOS.init({
         duration: 800,
-        once: true,
+       
         easing: "ease-in-out",
         offset: 50,
       });
@@ -2930,7 +2923,7 @@
     <script>
       AOS.init({
         duration: 800,
-        once: true,
+       
         easing: "ease-in-out",
         offset: 50,
       });
@@ -2938,10 +2931,11 @@
     <script>
       AOS.init({
         duration: 700,
-        once: true,
+       
         easing: "ease-in-out",
         offset: 30,
       });
     </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
